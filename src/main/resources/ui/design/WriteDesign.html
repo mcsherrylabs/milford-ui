@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+ <head>
+  <meta charset="UTF-8" name="design-properties" content="{&quot;RULERS_VISIBLE&quot;:true,&quot;GUIDELINES_VISIBLE&quot;:false,&quot;SNAP_TO_OBJECTS&quot;:true,&quot;SNAP_TO_GRID&quot;:true,&quot;SNAPPING_DISTANCE&quot;:10,&quot;JAVA_SOURCES_ROOT&quot;:&quot;src/main/java&quot;,&quot;THEME&quot;:&quot;template&quot;}">
+  <meta charset="UTF-8" name="vaadin-version" content="7.7.0">
+ </head> 
+ <body> 
+  <vaadin-vertical-layout id="writeLayout" size-full margin> 
+   <vaadin-form-layout :middle> 
+    <!--vaadin-combo-field caption="To" width-full _id="toField"></vaadin-combo-field-->
+    <vaadin-combo-box caption="To" style-name="small" width="550px" item-caption-mode="id" _id="toCombo">
+      <option>Option 1</option>
+     </vaadin-combo-box>
+    <vaadin-text-field caption="Amount" width="550px" _id="amountField"></vaadin-text-field>
+    <vaadin-combo-box caption="Schedule" style-name="small" width="550px" item-caption-mode="id" _id="scheduleCombo">
+     <option>Once</option>
+     <option>Daily</option>
+     <option>Weekly</option>
+     <option>Monthly</option>
+    </vaadin-combo-box>
+    <vaadin-text-area rows="12" responsive width-full _id="messageText" :middle>
+      Type here ... 
+    </vaadin-text-area> 
+    <vaadin-button icon="fonticon://FontAwesome/f1d8" plain-text _id="sendButton" :middle :right>
+      Send 
+    </vaadin-button> 
+   </vaadin-form-layout> 
+  </vaadin-vertical-layout>  
+ </body>
+</html>

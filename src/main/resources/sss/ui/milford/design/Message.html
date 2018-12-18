@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+ <head>
+  <meta charset="UTF-8">
+  <meta name="design-properties" content="{&quot;RULERS_VISIBLE&quot;:true,&quot;GUIDELINES_VISIBLE&quot;:false,&quot;SNAP_TO_OBJECTS&quot;:true,&quot;SNAP_TO_GRID&quot;:true,&quot;SNAPPING_DISTANCE&quot;:10,&quot;GENERATE_GETTERS&quot;:false,&quot;JAVA_SOURCES_ROOT&quot;:&quot;src/main/java&quot;,&quot;THEME&quot;:&quot;template&quot;}">
+  <meta name="vaadin-version" content="8.1.5">
+ </head>
+ <body>
+  <vaadin-vertical-layout spacing="false" margin="false">
+   <vaadin-panel style-name="well borderless" _id="messageHeaderPanel" :center>
+    <vaadin-horizontal-layout style-name="message-header" spacing="false" width-full margin-bottom _id="messageHeader">
+     <vaadin-horizontal-layout width-full :middle :expand="0.8">
+      <vaadin-image source="theme://images/alan_head_shot.png" style-name="rounded-image" width="50px" height="50px" alt="" _id="senderImage" :middle :expand="0.2"></vaadin-image>
+      <vaadin-link caption="Captain Willard" _id="messageSender" :middle :expand="0.4"></vaadin-link>
+      <vaadin-label responsive plain-text _id="receivedAt" :middle :expand="0.4">
+        01 Dec 18 13:22 
+      </vaadin-label>
+     </vaadin-horizontal-layout>
+     <vaadin-css-layout style-name="v-component-group" _id="topBtnLayout" :middle :right :expand="0.2">
+      <vaadin-button icon="fonticon://Vaadin-Icons/e7fd" style-name="icon-only borderless tiny" plain-text _id="keepPost"></vaadin-button>
+      <vaadin-button icon="fonticon://Vaadin-Icons/e7ce" style-name="icon-only borderless tiny" plain-text _id="optionsPost"></vaadin-button>
+     </vaadin-css-layout>
+    </vaadin-horizontal-layout>
+   </vaadin-panel>
+  </vaadin-vertical-layout>
+ </body>
+</html>

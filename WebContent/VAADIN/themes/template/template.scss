@@ -1,0 +1,137 @@
+// Global variable overrides. Must be declared before importing Valo.
+
+$v-app-loading-text: "Openstar Nobu";
+
+$v-font-family: "Source Sans Pro", sans-serif;
+$v-app-background-color: #e6e6e6;
+$v-background-color: #eee;
+$v-focus-color: #5e5e5e;
+$v-focus-style: 0 0 0 1px $v-focus-color;
+$valo-menu-background-color: #fff;
+$v-border: 0 solid v-shade;
+$v-border-radius: 0px;
+$v-bevel: false;
+$v-gradient: false;
+$v-shadow: false;
+$v-textfield-bevel: false;
+$v-textfield-shadow: false;
+$v-textfield-border: 1px solid v-shade;
+$v-link-text-decoration: none;
+$v-overlay-shadow: 0 0 0 2px #000;
+$v-overlay-border-width: 2px; // For IE8
+$v-window-shadow: $v-overlay-shadow;
+$v-selection-overlay-background-color: #fff;
+$v-selection-overlay-padding-horizontal: 0;
+$v-selection-overlay-padding-vertical: 2px;
+//$v-panel-border: 2px solid v-shade;
+$v-spacing: 0px;
+
+@import "../valo/valo.scss";
+
+@mixin template {
+  @include valo;
+
+
+  .black-text {
+     color: #080808;
+  }
+
+  .min-width-rhs {
+        min-width: 465px;
+   }
+
+  .min-width-lhs {
+      min-width: 165px;
+  }
+
+  .max-width-tools {
+      max-width: 865px;
+  }
+
+ .max-width-full {
+      max-width: 915px;
+  }
+
+  .max-width-center {
+      max-width: 750px;
+  }
+
+  .no-margin {
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+  }
+
+  .message-header {
+    background-color:white;
+  }
+
+  .rounded-image {
+        border-radius: 50%;
+  }
+
+  // Insert your own theme rules here
+  .backColorGrey{
+           background-color:#ACACAC;
+  }
+
+  .back-color-greeny {
+     background: transparent;
+     @include linear-gradient(to right, #3C9130, white);
+     color: black;
+     //background-color: #3C9130;
+  }
+
+  .backColorGreen{
+           background-color: #3C9130;
+  }
+  
+  .back-color-blue{
+           background-color:blue;  
+  }
+  
+  .back-white{
+           background-color:white;  
+  }
+  
+  .backColorYellow{
+           background-color:yellow;
+  }
+  
+  .bolderBigger{
+      font-size: 18px;
+	  line-height: normal;
+	  font-weight: bold;
+  }
+
+
+  .marginleft {
+ 	margin-left: 14px;
+  }
+
+  .messagepanel {
+ 	background-color: #fafafa;
+ 	border: 0;
+ 	margin: 0;
+  }
+
+  .border-right {
+     border-right: 1px solid lightGrey;
+  }
+
+  .messageborder {
+
+ 	-moz-border-radius: 16px;
+ 	background-color: #fafafa;
+ 	border: 1px solid lightGrey;
+ 	border-radius: 16px; /* standards-compliant: (IE) */
+  }
+  .internalmessageborder {
+
+    border-left: 0;
+    border-right: 0;
+ 	border-top: 1px solid lightGrey;
+ 	border-bottom: 1px solid lightGrey;
+ 	background-color: white;
+
+  }
+}

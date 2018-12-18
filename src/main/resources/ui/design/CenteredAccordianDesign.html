@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+ <head>
+  <meta charset="UTF-8" name="design-properties" content="{&quot;RULERS_VISIBLE&quot;:true,&quot;GUIDELINES_VISIBLE&quot;:false,&quot;SNAP_TO_OBJECTS&quot;:true,&quot;SNAP_TO_GRID&quot;:true,&quot;SNAPPING_DISTANCE&quot;:10,&quot;JAVA_SOURCES_ROOT&quot;:&quot;src/main/java&quot;,&quot;THEME&quot;:&quot;template&quot;}">
+  <meta charset="UTF-8" name="vaadin-version" content="7.7.0">
+ </head> 
+ <body>
+ <vaadin-horizontal-layout style-name="valo-menu-responsive" id="responsive-application-template" size-full>
+  <vaadin-css-layout style-name="valo-menu messageborder" height="70%" :middle :center :expand>
+   <vaadin-css-layout>
+    <vaadin-css-layout style-name="valo-menuitems" _id="menuItems">
+     <vaadin-button icon="fonticon://FontAwesome/f09c" primary-style-name="valo-menu-item" width-full plain-text _id="unlockMnuBtn">
+      Unlock
+     </vaadin-button>
+     <vaadin-button icon="fonticon://FontAwesome/f002" primary-style-name="valo-menu-item" _id="claimMnuBtn">
+      Register
+     </vaadin-button>
+    </vaadin-css-layout>
+   </vaadin-css-layout>
+   <vaadin-vertical-layout style-name="valo-menu-part" id="unlockIdentity" size-auto margin _id="rhsUnlock">
+    <vaadin-text-area width-full readonly _id="unlockInfoTextArea">
+     Unlock an identity using the phrase it was locked it with when it was claimed.
+    </vaadin-text-area>
+    <vaadin-form-layout size-auto :middle :center>
+     <vaadin-combo-box caption="Identity" style-name="small" width="250px" item-caption-mode="id" _id="identityCombo">
+      <option>Option 1</option>
+     </vaadin-combo-box>
+     <vaadin-text-field caption="Tag" style-name="small" width="250px" _id="unlockTagText"></vaadin-text-field>
+     <vaadin-password-field caption="Phrase" style-name="small" width="250px" _id="unLockPhrase"></vaadin-password-field>
+     <vaadin-button icon="fonticon://FontAwesome/f09c" style-name="small" plain-text _id="unlockBtn" :middle :right>
+      Unlock
+     </vaadin-button>
+    </vaadin-form-layout>
+   </vaadin-vertical-layout>
+   <vaadin-vertical-layout style-name="valo-menu-part" id="claimIdentity" size-auto margin _id="rhsClaim">
+    <vaadin-text-area width-full _id="claimInfoTextArea">
+     Register a new identity in the identity ledger...
+     Only simple lowercase characters and numbers are allowed in the identity field, try using your name with no spaces.
+     Use a secure and unique password. The password you provide IS NOT RESETTABLE.
+    </vaadin-text-area>
+    <vaadin-form-layout size-auto :middle :center>
+     <vaadin-text-field caption="Identity" style-name="small" width="250px" _id="claimIdentityText"></vaadin-text-field>
+     <vaadin-text-field caption="Tag" style-name="small" width="250px" _id="claimTagText"></vaadin-text-field>
+     <vaadin-password-field caption="Phrase" style-name="small" width="250px" _id="claimPhrase"></vaadin-password-field>
+     <vaadin-password-field caption="Retype" style-name="small" width="250px" _id="claimPhraseRetype"></vaadin-password-field>
+     <vaadin-button icon="fonticon://FontAwesome/f007" style-name="small" plain-text _id="claimBtn" :middle :right>
+      Register
+     </vaadin-button>
+    </vaadin-form-layout>
+   </vaadin-vertical-layout>
+  </vaadin-css-layout>
+ </vaadin-horizontal-layout>
+ </body>
+</html>

@@ -1,0 +1,93 @@
+<!doctype html>
+<html>
+ <head>
+  <meta charset="UTF-8">
+  <meta name="design-properties" content="{&quot;RULERS_VISIBLE&quot;:true,&quot;GUIDELINES_VISIBLE&quot;:false,&quot;SNAP_TO_OBJECTS&quot;:true,&quot;SNAP_TO_GRID&quot;:true,&quot;SNAPPING_DISTANCE&quot;:10,&quot;GENERATE_GETTERS&quot;:false,&quot;JAVA_SOURCES_ROOT&quot;:&quot;src/main/java&quot;,&quot;THEME&quot;:&quot;template&quot;}">
+  <meta name="vaadin-version" content="8.1.5">
+ </head>
+ <body>
+  <vaadin-vertical-layout style-name="valo-menu-responsive no-margin" spacing="false" responsive id="responsive-application-template" size-full margin="false">
+   <vaadin-horizontal-layout style-name="valo-menu-responsive no-margin back-color-greeny min-width-a" spacing="false" responsive width-full _id="topBar" :middle>
+    <vaadin-css-layout responsive height="50px" _id="logoContainer" :expand="0.05">
+     <vaadin-button icon="theme://images/star_only_green_bk_smallest_48.png" style-name="icon-only right-margin" plain-text _id="openstarLogo"></vaadin-button>
+    </vaadin-css-layout>
+    <vaadin-horizontal-layout style-name="max-width-tools" spacing="false" responsive width-full height="50px" _id="toolsBar" :middle :expand="0.95">
+     <vaadin-css-layout style-name="v-component-group" _id="searchGroup" :middle :expand="0.5">
+      <vaadin-text-field description="Enter to Search" style-name="messageborder" value="Search All ..." _id="searchField"></vaadin-text-field>
+      <vaadin-button icon="fonticon://Vaadin-Icons/e805" style-name="borderless" plain-text _id="searchBtn"></vaadin-button>
+      <vaadin-button icon="fonticon://Vaadin-Icons/e758" style-name="borderless" plain-text _id="notifyBell"></vaadin-button>
+     </vaadin-css-layout>
+     <vaadin-css-layout responsive _id="profilePicWrap" :middle :expand="0.3">
+      <vaadin-image source="theme://images/alan_head_shot.png" style-name="rounded-image" height="40px" _id="myProfilePic"></vaadin-image>
+      <vaadin-button enabled="false" style-name="borderless black-text" plain-text _id="profileName">
+        Alan McSherry 
+      </vaadin-button>
+     </vaadin-css-layout>
+     <vaadin-css-layout _id="myStatus" :middle :expand="0.2">
+      <vaadin-button icon="fonticon://Vaadin-Icons/e913" enabled="false" style-name="borderless black-text" plain-text _id="balanceValuBtnLbl">
+        Unknown 
+      </vaadin-button>
+     </vaadin-css-layout>
+    </vaadin-horizontal-layout>
+   </vaadin-horizontal-layout>
+   <vaadin-vertical-layout spacing="false" responsive size-full margin="false" :expand>
+    <vaadin-horizontal-layout style-name="no-margin" spacing="false" responsive size-full _id="allBelowTopBar">
+     <vaadin-vertical-layout style-name="valo-menu border-right" responsive width-auto height-full margin="false" _id="lhs">
+      <vaadin-vertical-layout style-name="valo-menu-part min-width-lhs" spacing="false" size-full margin="false">
+       <vaadin-css-layout style-name="valo-menuitems" height-full _id="menuItems">
+        <vaadin-button icon="fonticon://FontAwesome/f080" primary-style-name="valo-menu-item" _id="statusButton">
+          Status 
+        </vaadin-button>
+        <vaadin-button icon="fonticon://Vaadin-Icons/e7fa" primary-style-name="valo-menu-item" plain-text _id="writeButton">
+          Create 
+        </vaadin-button>
+        <vaadin-button icon="fonticon://Vaadin-Icons/e747" primary-style-name="valo-menu-item" plain-text _id="newGrp">
+          New Group 
+        </vaadin-button>
+        <vaadin-button icon="fonticon://FontAwesome/f187" primary-style-name="valo-menu-item" _id="archiveButton">
+          Archive 
+        </vaadin-button>
+        <vaadin-button icon="fonticon://FontAwesome/f1d9" primary-style-name="valo-menu-item" _id="sentButton">
+          Sent 
+        </vaadin-button>
+        <vaadin-button icon="fonticon://FontAwesome/f059" primary-style-name="valo-menu-item" _id="junkButton">
+          Junk 
+        </vaadin-button>
+        <vaadin-button icon="fonticon://FontAwesome/f1de" primary-style-name="valo-menu-item" _id="settingsButton">
+          Settings 
+        </vaadin-button>
+        <vaadin-button icon="fonticon://FontAwesome/f08b" primary-style-name="valo-menu-item" plain-text _id="logoutButton">
+          Logout 
+        </vaadin-button>
+       </vaadin-css-layout>
+      </vaadin-vertical-layout>
+     </vaadin-vertical-layout>
+     <vaadin-vertical-layout spacing="false" responsive size-full margin="false" _id="content" :expand="0.9">
+      <vaadin-panel style-name="back-white" _id="quickPostPanel">
+       <vaadin-vertical-layout spacing="false" _id="quickPost">
+        <vaadin-text-area style-name="messageborder" width-full _id="quickPostText">
+          Write here ... 
+        </vaadin-text-area>
+        <vaadin-horizontal-layout style-name="v-component-group" spacing="false" :middle :right>
+         <vaadin-button icon="fonticon://Vaadin-Icons/e72d" style-name="borderless button-tiny" plain-text _id="attachFile"></vaadin-button>
+         <vaadin-button icon="fonticon://Vaadin-Icons/e7fc" style-name="borderless button-tiny" plain-text _id="attachPhoto"></vaadin-button>
+         <vaadin-button icon="fonticon://Vaadin-Icons/e6b9" style-name="borderless button-tiny" plain-text _id="sendQuickPost"></vaadin-button>
+        </vaadin-horizontal-layout>
+       </vaadin-vertical-layout>
+      </vaadin-panel>
+      <vaadin-horizontal-layout spacing="false" width-full _id="statusLayout" :middle :center>
+       <vaadin-css-layout style-name="v-component-group" _id="navBtns" :middle :center>
+        <vaadin-button icon="fonticon://FontAwesome/f053" style-name="small borderless-colored" _id="prevButton"></vaadin-button>
+        <vaadin-button icon="fonticon://FontAwesome/f054" style-name="small borderless-colored" _id="nextButton"></vaadin-button>
+       </vaadin-css-layout>
+      </vaadin-horizontal-layout>
+      <vaadin-panel style-name="paneloverflow no-margin" size-full _id="itemPanel" :expand>
+       <vaadin-vertical-layout spacing="false" margin="false" _id="itemPanelVerticalLayout"></vaadin-vertical-layout>
+      </vaadin-panel>
+     </vaadin-vertical-layout>
+     <vaadin-vertical-layout style-name="back-white min-width-rhs" spacing="false" size-full _id="rhs" :expand="0.1"></vaadin-vertical-layout>
+    </vaadin-horizontal-layout>
+   </vaadin-vertical-layout>
+  </vaadin-vertical-layout>
+ </body>
+</html>
